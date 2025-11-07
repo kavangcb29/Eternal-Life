@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health | Eternal Life</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    /* Navbar */
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      color: #007b8f;
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #007b8f;
+    }
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(to right, #eaf6f8, #ffffff);
+      padding: 60px 50px;
+      text-align: center;
+    }
+
+    .page-header h2 {
+      font-size: 36px;
+      color: #004e57;
+      margin-bottom: 15px;
+    }
+
+    .page-header p {
+      font-size: 17px;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Health Section General */
+    section {
+      background-color: #ffffff;
+      margin: 40px 50px;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    section h3 {
+      color: #007b8f;
+      margin-bottom: 20px;
+      font-size: 24px;
+      border-bottom: 2px solid #e2f0f2;
+      padding-bottom: 10px;
+    }
+
+    /* Vitals */
+    .vitals-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .vital-card {
+      background-color: #f9fbfb;
+      border-radius: 8px;
+      width: 180px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .vital-card h4 {
+      color: #004e57;
+      margin-bottom: 5px;
+    }
+
+    .vital-value {
+      font-size: 22px;
+      color: #007b8f;
+      font-weight: 600;
+    }
+
+    .vital-unit {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Diagnostic Reports */
+    .reports ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .reports li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .reports a {
+      color: #007b8f;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .reports a:hover {
+      text-decoration: underline;
+    }
+
+    /* Conditions */
+    .conditions, .restrictions {
+      line-height: 1.7;
+    }
+
+    .condition-list, .restriction-list {
+      list-style-type: square;
+      margin-left: 25px;
+    }
+
+    /* Highlight boxes */
+    .alert-box {
+      background-color: #fff4e5;
+      border-left: 5px solid #ffb347;
+      padding: 15px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    .alert-box strong {
+      color: #c56a00;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004e57;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .vitals-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      section {
+        margin: 20px;
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Eternal Life</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="features.html">Features</a>
+      <a href="health.html">Health</a>
+      <a href="community.html">Community</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h2>Health Overview</h2>
+    <p>
+      Track your vitals, view reports, monitor medical conditions, and stay informed about dietary restrictions — all in one secure place.
+    </p>
+  </div>
+
+  <!-- Vitals Section -->
+  <section class="vitals">
+    <h3>Current Vitals</h3>
+    <div class="vitals-grid">
+      <div class="vital-card">
+        <h4>Heart Rate</h4>
+        <div class="vital-value">78</div>
+        <div class="vital-unit">bpm</div>
+      </div>
+      <div class="vital-card">
+        <h4>Blood Pressure</h4>
+        <div class="vital-value">120/80</div>
+        <div class="vital-unit">mmHg</div>
+      </div>
+      <div class="vital-card">
+        <h4>Blood Sugar</h4>
+        <div class="vital-value">108</div>
+        <div class="vital-unit">mg/dL</div>
+      </div>
+      <div class="vital-card">
+        <h4>Body Temperature</h4>
+        <div class="vital-value">98.4</div>
+        <div class="vital-unit">°F</div>
+      </div>
+      <div class="vital-card">
+        <h4>Oxygen Level</h4>
+        <div class="vital-value">97</div>
+        <div class="vital-unit">%</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diagnostic Reports -->
+  <section class="reports">
+    <h3>Recent Diagnostic Reports</h3>
+    <ul>
+      <li>🩸 <a href="#">Blood Test - October 2025</a></li>
+      <li>🫁 <a href="#">Chest X-Ray - September 2025</a></li>
+      <li>💓 <a href="#">ECG Report - August 2025</a></li>
+      <li>🧬 <a href="#">Diabetes Checkup - June 2025</a></li>
+    </ul>
+  </section>
+
+  <!-- Medical Conditions -->
+  <section class="conditions">
+    <h3>Existing Conditions</h3>
+    <ul class="condition-list">
+      <li>Type 2 Diabetes (Managed with medication)</li>
+      <li>Hypertension</li>
+      <li>Early-stage Arthritis</li>
+      <li>Post-Cancer Recovery (Remission since 2023)</li>
+    </ul>
+
+    <div class="alert-box">
+      <strong>Note:</strong> Maintain regular checkups every 3 months for blood sugar and blood pressure. Contact your physician if fatigue or swelling increases.
+    </div>
+  </section>
+
+  <!-- Food Restrictions -->
+  <section class="restrictions">
+    <h3>Dietary Restrictions & Allergies</h3>
+    <ul class="restriction-list">
+      <li>Allergy: Peanuts and shellfish</li>
+      <li>Avoid high-sugar and processed foods</li>
+      <li>Limit sodium intake (for hypertension)</li>
+      <li>Prefer whole grains, leafy greens, and low-fat dairy</li>
+      <li>Hydrate regularly (2–3 liters of water daily)</li>
+    </ul>
+
+    <div class="alert-box">
+      <strong>Tip:</strong> Follow your doctor’s diabetic meal plan — include fiber-rich foods, lean proteins, and small frequent meals.
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Eternal Life | Designed for Better Senior Living</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms of Use</a>
+    </p>
+  </footer>
+
+</body>
+</html>

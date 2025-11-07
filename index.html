@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eternal Life | Enhancing Senior Living</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    /* Navbar */
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      color: #007b8f;
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #007b8f;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 50px;
+      background: linear-gradient(to right, #eaf6f8, #ffffff);
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h2 {
+      font-size: 40px;
+      color: #004e57;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .hero-text a {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #007b8f;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .hero-text a:hover {
+      background-color: #005f6a;
+    }
+
+    .hero img {
+      width: 40%;
+      border-radius: 10px;
+    }
+
+    /* Features */
+    .features {
+      padding: 60px 50px;
+      text-align: center;
+    }
+
+    .features h3 {
+      font-size: 28px;
+      color: #004e57;
+      margin-bottom: 40px;
+    }
+
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .feature {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 280px;
+      padding: 25px;
+      transition: transform 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .feature h4 {
+      color: #007b8f;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .feature p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004e57;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text {
+        max-width: 100%;
+      }
+
+      .hero img {
+        width: 80%;
+        margin-top: 20px;
+      }
+
+      .feature-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Eternal Life</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.htm">About</a>
+      <a href="Health.html">Health</a>
+      <a href="community.html">Community</a>
+      <a href="Appointment">Appointment</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Empowering Senior Living</h2>
+      <p>
+        Eternal Life is a comprehensive app designed to enhance the quality of life for senior citizens by integrating health, safety, and social well-being into one accessible platform.
+      </p>
+      <a href="about.htm">Learn More</a>
+    </div>
+    <img src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2018/03/20/Pictures/ht-pune_7f5157ac-2c6a-11e8-8732-87a46da2a8cc.jpg" alt="Elderly person using app">
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h3>What Eternal Life Offers</h3>
+    <div class="feature-grid">
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966483.png" alt="Health Monitoring">
+        <h4>Health Monitoring</h4>
+        <p>Track vital health metrics and receive personalized wellness insights daily.</p>
+      </div>
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/3272/3272849.png" alt="Reminders">
+        <h4>Medication Reminders</h4>
+        <p>Never miss your medication or appointment with easy alerts and reminders.</p>
+      </div>
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331942.png" alt="Emergency Assistance">
+        <h4>Emergency Help</h4>
+        <p>Instant emergency assistance at your fingertips for peace of mind.</p>
+      </div>
+      <div class="feature">
+        <img src="https://cdn-icons-png.flaticon.com/512/2950/2950694.png" alt="Community Connection">
+        <h4>Community & Events</h4>
+        <p>Connect with others, share experiences, and stay socially engaged online.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Eternal Life | Designed for Better Senior Living</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms of Use</a>
+    </p>
+  </footer>
+
+</body>
+</html>

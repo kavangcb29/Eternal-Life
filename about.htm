@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Eternal Life</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    /* Navbar */
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      color: #007b8f;
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #007b8f;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to right, #eaf6f8, #ffffff);
+      padding: 60px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero img {
+      width: 45%;
+      border-radius: 10px;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h2 {
+      font-size: 36px;
+      color: #004e57;
+      margin-bottom: 15px;
+    }
+
+    .hero-text p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Mission Section */
+    .mission {
+      background-color: #ffffff;
+      padding: 60px 50px;
+      text-align: center;
+    }
+
+    .mission h3 {
+      color: #004e57;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .mission p {
+      font-size: 17px;
+      line-height: 1.7;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    /* Vision Section */
+    .vision {
+      padding: 60px 50px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      background-color: #f0f8fa;
+    }
+
+    .vision img {
+      width: 45%;
+      border-radius: 10px;
+    }
+
+    .vision-text {
+      flex: 1;
+    }
+
+    .vision-text h3 {
+      color: #004e57;
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    .vision-text p {
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* Team Section */
+    .team {
+      background-color: #ffffff;
+      padding: 60px 50px;
+      text-align: center;
+    }
+
+    .team h3 {
+      color: #004e57;
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .member {
+      background-color: #f8fafa;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 250px;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .member:hover {
+      transform: translateY(-5px);
+    }
+
+    .member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .member h4 {
+      color: #007b8f;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .member p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004e57;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .hero, .vision {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero img, .vision img {
+        width: 80%;
+        margin-top: 20px;
+      }
+
+      .hero-text, .vision-text {
+        max-width: 100%;
+      }
+
+      .team-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Eternal Life</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.htm">About</a>
+      <a href="features.html">Features</a>
+      <a href="community.html">Community</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>About Eternal Life</h2>
+      <p>
+        Eternal Life is more than just an app — it’s a caring companion for the elderly. 
+        Designed to support health, safety, and emotional well-being, Eternal Life ensures 
+        senior citizens lead fulfilling, connected, and independent lives.
+      </p>
+    </div>
+    <img src="https://cdn.pixabay.com/photo/2017/02/15/11/42/care-2066531_960_720.jpg" alt="Elderly Care">
+  </section>
+
+  <!-- Mission Section -->
+  <section class="mission">
+    <h3>Our Mission</h3>
+    <p>
+      To empower senior citizens to lead healthier, more independent, and socially 
+      connected lives by integrating personalized health monitoring, safety alerts, 
+      and emotional support tools — all within one intuitive platform.
+    </p>
+  </section>
+
+  <!-- Vision Section -->
+  <section class="vision">
+    <img src="https://cdn.pixabay.com/photo/2016/11/29/03/47/elderly-1867458_960_720.jpg" alt="Happy Seniors">
+    <div class="vision-text">
+      <h3>Our Vision</h3>
+      <p>
+        We envision a world where technology bridges the gap between generations — 
+        fostering health, security, and social belonging for every elderly individual. 
+        Eternal Life aspires to be the go-to digital companion that not only promotes 
+        wellness but nurtures happiness and purpose in senior living.
+      </p>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team">
+    <h3>Meet the Team</h3>
+    <div class="team-grid">
+      <div class="member">
+        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Team Member 1">
+        <h4>Kavan Sudev</h4>
+        <p>Project Lead</p>
+      </div>
+      <div class="member">
+        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" alt="Team Member 2">
+        <h4>Vaishnavi BL</h4>
+        <p>knowledge</p>
+      </div>
+      <div class="member">
+        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Team Member 3">
+        <h4>Neha Singh</h4>
+        <p>Backend Developer</p>
+      </div>
+      <div class="member">
+        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="Team Member 4">
+        <h4>Arjun Mehta</h4>
+        <p>Mobile App Developer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Eternal Life | Designed for Better Senior Living</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms of Use</a>
+    </p>
+  </footer>
+
+</body>
+</html>
