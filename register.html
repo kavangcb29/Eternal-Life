@@ -162,6 +162,65 @@
     }
   </style>
 </head>
+  <script type="module">
+  // Import Firebase SDK
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+  import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+  // 🔧 Replace with your Firebase project config
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  // 🧾 Handle Registration Form
+  const registerForm = document.querySelector("#abhaForm");
+  registerForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const email = document.querySelector("#email")?.value;
+    const password = document.querySelector("#password")?.value;
+    const fullname = document.querySelector("#fullname").value;
+    const age = document.querySelector("#age").value;
+    const gender = document.querySelector("#gender").value;
+    const conditions = document.querySelector("#conditions").value;
+    const abhaNumber = document.querySelector("#abhaNumber")?.value || "";
+    const abhaAddress = document.querySelector("#abhaAddress")?.value || "";
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      // Save to Firestore
+      await setDoc(doc(db, "users", user.uid), {
+        fullname,
+        email,
+        age,
+        gender,
+        conditions,
+        abhaNumber,
+        abhaAddress,
+        createdAt: new Date().toISOString()
+      });
+
+      alert("Registration successful! Redirecting...");
+      window.location.href = "dashboard.html";
+
+    } catch (error) {
+      alert("Error: " + error.message);
+    }
+  });
+</script>
+
 <body>
 
   <!-- Header -->
