@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | Eternal Life</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    /* Navbar */
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      color: #007b8f;
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #007b8f;
+    }
+
+    /* Registration Form Section */
+    .register {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    .register-container {
+      background-color: #ffffff;
+      padding: 40px 50px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .register-container h2 {
+      color: #004e57;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: 500;
+      margin-top: 15px;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #007b8f;
+      box-shadow: 0 0 4px rgba(0, 123, 143, 0.3);
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .checkbox input {
+      margin-right: 10px;
+    }
+
+    .btn-submit {
+      margin-top: 25px;
+      padding: 12px;
+      background-color: #007b8f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-submit:hover {
+      background-color: #005f6a;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login-link a {
+      color: #007b8f;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #004e57;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .register-container {
+        padding: 30px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Eternal Life</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="features.html">Features</a>
+      <a href="health.html">Health</a>
+      <a href="community.html">Community</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <!-- Registration Form -->
+  <section class="register">
+    <div class="register-container">
+      <h2>Create Your Account</h2>
+      <form action="https://formspree.io/f/xanayjpk" method="POST">
+        <!-- Replace YOUR_FORM_ID with your actual Formspree endpoint -->
+
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="50" required />
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="conditions">Existing Health Conditions</label>
+        <textarea id="conditions" name="conditions" rows="3" placeholder="e.g. Diabetes, Hypertension"></textarea>
+
+        <div class="checkbox">
+          <input type="checkbox" id="agree" name="agree" required />
+          <label for="agree">I agree to the <a href="terms.html" style="color:#007b8f; text-decoration:none;">Terms & Conditions</a></label>
+        </div>
+
+        <button type="submit" class="btn-submit">Register</button>
+
+        <div class="login-link">
+          Already have an account? <a href="#">Login here</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Eternal Life | Designed for Better Senior Living</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms of Use</a>
+    </p>
+  </footer>
+
+</body>
+</html>
