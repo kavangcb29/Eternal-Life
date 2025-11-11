@@ -1,245 +1,815 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eternal Life | Enhancing Senior Living</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #f5f7fa;
-      color: #333;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eternal Life | Enhancing Senior Living</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
 
-    /* Navbar */
-    header {
-      background-color: #ffffff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 15px 50px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+        /* Navbar */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
 
-    header h1 {
-      color: #007b8f;
-      font-size: 26px;
-      font-weight: 700;
-      margin: 0;
-    }
+        header h1 {
+            color: #007b8f;
+            font-size: 26px;
+            font-weight: 700;
+            margin: 0;
+        }
 
-    nav a {
-      color: #333;
-      text-decoration: none;
-      margin-left: 25px;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-    nav a:hover {
-      color: #007b8f;
-    }
+        nav a:hover {
+            color: #007b8f;
+        }
 
-    /* Hero Section */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 60px 50px;
-      background: linear-gradient(to right, #eaf6f8, #ffffff);
-    }
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 50px;
+            background: linear-gradient(to right, #eaf6f8, #ffffff);
+        }
 
-    .hero-text {
-      max-width: 50%;
-    }
+        .hero-text {
+            max-width: 50%;
+        }
 
-    .hero-text h2 {
-      font-size: 40px;
-      color: #004e57;
-      margin-bottom: 20px;
-    }
+        .hero-text h2 {
+            font-size: 40px;
+            color: #004e57;
+            margin-bottom: 20px;
+        }
 
-    .hero-text p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 25px;
-    }
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
 
-    .hero-text a {
-      display: inline-block;
-      padding: 12px 25px;
-      background-color: #007b8f;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: background-color 0.3s;
-    }
+        .hero-text a {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007b8f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
 
-    .hero-text a:hover {
-      background-color: #005f6a;
-    }
+        .hero-text a:hover {
+            background-color: #005f6a;
+        }
 
-    .hero img {
-      width: 40%;
-      border-radius: 10px;
-    }
+        .hero img {
+            width: 40%;
+            border-radius: 10px;
+        }
 
-    /* Features */
-    .features {
-      padding: 60px 50px;
-      text-align: center;
-    }
+        /* Features */
+        .features {
+            padding: 60px 50px;
+            text-align: center;
+        }
 
-    .features h3 {
-      font-size: 28px;
-      color: #004e57;
-      margin-bottom: 40px;
-    }
+        .features h3, .community-hub h3 {
+            font-size: 28px;
+            color: #004e57;
+            margin-bottom: 40px;
+        }
 
-    .feature-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
 
-    .feature {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 280px;
-      padding: 25px;
-      transition: transform 0.3s;
-    }
+        .feature {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 280px;
+            padding: 25px;
+            transition: transform 0.3s;
+        }
 
-    .feature:hover {
-      transform: translateY(-5px);
-    }
+        .feature:hover {
+            transform: translateY(-5px);
+        }
 
-    .feature img {
-      width: 60px;
-      margin-bottom: 15px;
-    }
+        .feature img {
+            width: 60px;
+            margin-bottom: 15px;
+        }
 
-    .feature h4 {
-      color: #007b8f;
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
+        .feature h4 {
+            color: #007b8f;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
 
-    .feature p {
-      font-size: 15px;
-      line-height: 1.5;
-    }
+        .feature p {
+            font-size: 15px;
+            line-height: 1.5;
+        }
 
-    /* Footer */
-    footer {
-      background-color: #004e57;
-      color: #fff;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 50px;
-    }
+        /* --- Community Hub Styles (Adapted) --- */
+        .community-hub {
+            padding: 60px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    footer a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
-    }
+        .hub-container {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border: 1px solid #e0e0e0;
+        }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+        /* Tab Navigation */
+        .tab-navigation {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 10px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
-      }
+        .tab-button {
+            background: none;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            color: #666; /* Inactive color */
+        }
+        
+        .tab-button svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
 
-      .hero-text {
-        max-width: 100%;
-      }
+        .tab-button:hover {
+            color: #007b8f;
+            background-color: #f0f8f9;
+        }
 
-      .hero img {
-        width: 80%;
-        margin-top: 20px;
-      }
+        .tab-button.active {
+            color: #fff;
+            background-color: #007b8f; /* Primary theme color */
+            box-shadow: 0 2px 4px rgba(0, 123, 143, 0.4);
+        }
+        
+        /* Tab Content */
+        .tab-content-area {
+            padding: 30px;
+        }
 
-      .feature-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+        .tab-content-header {
+            font-size: 24px;
+            font-weight: 700;
+            color: #004e57;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .tab-content-header svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        /* News Feed */
+        #news-feed {
+            max-height: 500px;
+            overflow-y: auto;
+            padding-right: 10px; /* Space for scrollbar */
+        }
+        .news-item {
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: background-color 0.2s;
+        }
+        .news-item:hover {
+            background-color: #f9f9ff;
+        }
+        .news-item h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 0 0 5px 0;
+        }
+        .news-item p.date {
+            font-size: 12px;
+            color: #007b8f;
+            margin-bottom: 8px;
+        }
+        .news-item p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+
+        /* Gallery */
+        .gallery-info {
+            padding: 15px;
+            background-color: #fff9e6; /* Light yellow for mock warning */
+            border: 1px solid #ffe799;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-size: 14px;
+            color: #7a6100;
+            display: flex;
+            align-items: center;
+        }
+        .gallery-info svg {
+             width: 18px;
+             height: 18px;
+             margin-right: 10px;
+        }
+
+        #photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .gallery-photo {
+            position: relative;
+            padding-bottom: 100%; /* Aspect ratio 1:1 */
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .gallery-photo:hover {
+            transform: scale(1.02);
+        }
+        .gallery-photo img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-button {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            margin-top: 25px;
+            background-color: #ffc107; /* Yellowish button */
+            color: #333;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .gallery-button:hover {
+            background-color: #e0a800;
+        }
+
+
+        /* Video Connect Layout */
+        .connect-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        @media (min-width: 768px) {
+            .connect-grid {
+                grid-template-columns: 2fr 1fr;
+            }
+            .video-section {
+                /* Span 2/3 width on desktop */
+                grid-column: 1 / 2;
+            }
+            .actions-section {
+                /* Span 1/3 width on desktop */
+                grid-column: 2 / 3;
+            }
+        }
+        
+        /* Video Section */
+        #video-embed-container {
+            position: relative;
+            width: 100%;
+            height: 250px; /* Default height */
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        #video-embed-container p {
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+        #video-embed-container svg {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            color: #ccc;
+        }
+        #video-embed-container.active {
+            height: 400px; /* Taller when active */
+        }
+        #video-embed-container iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .room-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        
+        .start-call-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745; /* Green button */
+            color: #fff;
+            font-weight: 700;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            box-shadow: 0 4px 8px rgba(40, 167, 69, 0.4);
+        }
+        .start-call-btn:hover {
+            background-color: #218838;
+            transform: scale(1.01);
+        }
+        
+        /* Quick Actions */
+        .action-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+            margin-bottom: 10px;
+        }
+        .action-button:hover {
+            background-color: #e0f7fa;
+            border-color: #007b8f;
+        }
+        .action-button svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        
+        /* Message Box */
+        #message-box {
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .hidden { display: none; }
+        .bg-blue { background-color: #eaf6f8; color: #007b8f; border: 1px solid #007b8f; }
+        .bg-green { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+
+        /* Footer */
+        footer {
+            background-color: #004e57;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+            nav a {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+            .hero, .features, .community-hub {
+                padding: 40px 20px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .hero img {
+                width: 80%;
+                margin-top: 20px;
+            }
+
+            .feature-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tab-navigation {
+                justify-content: center;
+                gap: 5px;
+            }
+            
+            .tab-button {
+                padding: 8px 10px;
+                font-size: 12px;
+            }
+            .tab-button svg {
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+            }
+
+            .tab-content-area {
+                padding: 15px;
+            }
+            
+            #photo-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Need to load Lucide icons via JS -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Header -->
-  <header>
-    <h1>Eternal Life</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.htm">About</a>
-      <a href="Health.html">Health</a>
-      <a href="community.html">Community</a>
-      <a href="Appointment">Appointment</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header>
+        <h1>Eternal Life</h1>
+        <nav>
+            <a href="#home-hero">Home</a>
+            <a href="#about-section">About</a>
+            <a href="#health-section">Health</a>
+            <a href="#community-hub">Community</a> <!-- Link to the section below -->
+            <a href="#appointment-link">Appointment</a>
+            <a href="#contact-footer">Contact Us</a>
+        </nav>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-text">
-      <h2>Empowering Senior Living</h2>
-      <p>
-        Eternal Life is a comprehensive app designed to enhance the quality of life for senior citizens by integrating health, safety, and social well-being into one accessible platform.
-      </p>
-      <a href="about.htm">Learn More</a>
-    </div>
-    <img src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2018/03/20/Pictures/ht-pune_7f5157ac-2c6a-11e8-8732-87a46da2a8cc.jpg" alt="Elderly person using app">
-  </section>
+    <!-- Hero Section -->
+    <section class="hero" id="home-hero">
+        <div class="hero-text">
+            <h2>Empowering Senior Living</h2>
+            <p>
+                Eternal Life is a comprehensive app designed to enhance the quality of life for senior citizens by integrating health, safety, and social well-being into one accessible platform.
+            </p>
+            <a href="#about-section">Learn More</a>
+        </div>
+        <img src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2018/03/20/Pictures/ht-pune_7f5157ac-2c6a-11e8-8732-87a46da2a8cc.jpg" alt="Elderly person using app">
+    </section>
 
-  <!-- Features -->
-  <section class="features">
-    <h3>What Eternal Life Offers</h3>
-    <div class="feature-grid">
-      <div class="feature">
-        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966483.png" alt="Health Monitoring">
-        <h4>Health Monitoring</h4>
-        <p>Track vital health metrics and receive personalized wellness insights daily.</p>
-      </div>
-      <div class="feature">
-        <img src="https://cdn-icons-png.flaticon.com/512/3272/3272849.png" alt="Reminders">
-        <h4>Medication Reminders</h4>
-        <p>Never miss your medication or appointment with easy alerts and reminders.</p>
-      </div>
-      <div class="feature">
-        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331942.png" alt="Emergency Assistance">
-        <h4>Emergency Help</h4>
-        <p>Instant emergency assistance at your fingertips for peace of mind.</p>
-      </div>
-      <div class="feature">
-        <img src="https://cdn-icons-png.flaticon.com/512/2950/2950694.png" alt="Community Connection">
-        <h4>Community & Events</h4>
-        <p>Connect with others, share experiences, and stay socially engaged online.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Features -->
+    <section class="features" id="about-section">
+        <h3>What Eternal Life Offers</h3>
+        <div class="feature-grid">
+            <div class="feature">
+                <img src="https://cdn-icons-png.flaticon.com/512/2966/2966483.png" alt="Health Monitoring">
+                <h4>Health Monitoring</h4>
+                <p>Track vital health metrics and receive personalized wellness insights daily.</p>
+            </div>
+            <div class="feature">
+                <img src="https://cdn-icons-png.flaticon.com/512/3272/3272849.png" alt="Reminders">
+                <h4>Medication Reminders</h4>
+                <p>Never miss your medication or appointment with easy alerts and reminders.</p>
+            </div>
+            <div class="feature">
+                <img src="https://cdn-icons-png.flaticon.com/512/2331/2331942.png" alt="Emergency Assistance">
+                <h4>Emergency Help</h4>
+                <p>Instant emergency assistance at your fingertips for peace of mind.</p>
+            </div>
+            <div class="feature">
+                <img src="https://cdn-icons-png.flaticon.com/512/2950/2950694.png" alt="Community Connection">
+                <h4>Community & Events</h4>
+                <p>Connect with others, share experiences, and stay socially engaged online.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Community Hub Section (Integrated) -->
+    <section class="community-hub" id="community-hub">
+        <h3>Our Online Community</h3>
+        
+        <div class="hub-container">
+            
+            <!-- Tab Navigation (Buttons) -->
+            <div id="tab-navigation" class="tab-navigation">
+                <nav class="flex space-x-4" aria-label="Tabs">
+                    <!-- Tab 1: News -->
+                    <button data-tab="news" class="tab-button active">
+                        <i data-lucide="megaphone"></i> Latest News
+                    </button>
+                    <!-- Tab 2: Gallery -->
+                    <button data-tab="gallery" class="tab-button">
+                        <i data-lucide="gallery-vertical"></i> Memory Gallery
+                    </button>
+                    <!-- Tab 3: Connect -->
+                    <button data-tab="connect" class="tab-button">
+                        <i data-lucide="video"></i> Video Connect
+                    </button>
+                </nav>
+            </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Eternal Life | Designed for Better Senior Living</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a> | 
-      <a href="terms.html">Terms of Use</a>
-    </p>
-  </footer>
+            <!-- Tab Content Area -->
+            <div id="tab-content" class="tab-content-area">
+                
+                <!-- Tab Content 1: Community News and Update -->
+                <div data-content="news" class="tab-content">
+                    <section id="news-updates">
+                        <h4 class="tab-content-header" style="color:#007b8f;">
+                            <i data-lucide="newspaper"></i>
+                            <span>Current Announcements</span>
+                        </h4>
+                        
+                        <!-- News Feed Container (Mock Data) -->
+                        <div id="news-feed" class="scrollable-content">
+                            <!-- News Item 1 -->
+                            <article class="news-item">
+                                <h3>Upcoming Town Hall Video Call</h3>
+                                <p class="date">October 25, 2025 | 7:00 PM EST</p>
+                                <p>Join the core team for a Q&A session on the new feature roadmap. Find the link in the Video Connect tab!</p>
+                            </article>
 
+                            <!-- News Item 2 -->
+                            <article class="news-item">
+                                <h3>Volunteer Day Success!</h3>
+                                <p class="date">October 18, 2025 | Events</p>
+                                <p>A huge thank you to all 50 volunteers who cleaned up Willow Creek Park this past Saturday. Check out the Memory Gallery for photos!</p>
+                            </article>
+                            
+                            <!-- News Item 3 -->
+                            <article class="news-item">
+                                <h3>Maintenance Window Reminder</h3>
+                                <p class="date">October 1, 2025 | Site Admin</p>
+                                <p>The site will undergo brief maintenance tonight at 2:00 AM UTC. Expect 15 minutes of downtime.</p>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Tab Content 2: Memory Gallery (Google Photos Mockup) -->
+                <div data-content="gallery" class="tab-content hidden">
+                    <section id="memory-gallery">
+                        <h4 class="tab-content-header" style="color:#ffc107;">
+                            <i data-lucide="image-up"></i>
+                            <span>Memory Gallery & Photo Stream</span>
+                        </h4>
+                        
+                        <div class="gallery-info">
+                            <i data-lucide="link"></i>
+                            <p>
+                                Conceptual Integration: Photos are streamed securely from our linked Google Photos album (API required for actual setup).
+                            </p>
+                        </div>
+
+                        <!-- Gallery Grid (Placeholders) -->
+                        <div id="photo-gallery">
+                            <!-- Placeholder 1 -->
+                            <div class="gallery-photo" onclick="alertPlaceholder('Photo: Summer Picnic')">
+                                <img src="https://placehold.co/400x400/818cf8/ffffff?text=Event+1" alt="Event 1">
+                            </div>
+                            <!-- Placeholder 2 -->
+                            <div class="gallery-photo" onclick="alertPlaceholder('Photo: Volunteer Day')">
+                                <img src="https://placehold.co/400x400/4f46e5/ffffff?text=Event+2" alt="Event 2">
+                            </div>
+                            <!-- Placeholder 3 -->
+                            <div class="gallery-photo" onclick="alertPlaceholder('Photo: Member Meetup')">
+                                <img src="https://placehold.co/400x400/374151/ffffff?text=Event+3" alt="Event 3">
+                            </div>
+                            <!-- Placeholder 4 -->
+                            <div class="gallery-photo" onclick="alertPlaceholder('Photo: Annual Retreat')">
+                                <img src="https://placehold.co/400x400/9ca3af/ffffff?text=Event+4" alt="Event 4">
+                            </div>
+                        </div>
+                        <button onclick="alertPlaceholder('Redirecting to full Google Photos gallery link.')" class="gallery-button">
+                            View Full Photo Stream
+                        </button>
+                    </section>
+                </div>
+                
+                <!-- Tab Content 3: Video Call and Quick Actions -->
+                <div data-content="connect" class="tab-content hidden">
+                    <h4 class="tab-content-header" style="color:#28a745;">
+                        <i data-lucide="phone-call"></i>
+                        <span>Live Video Connect & Quick Actions</span>
+                    </h4>
+
+                    <div class="connect-grid">
+                        
+                        <!-- Video Call Integration -->
+                        <section id="video-call" class="video-section">
+                            <p style="margin-bottom: 20px;">Jump into a random community room or create your own instant meeting room!</p>
+                            
+                            <div id="video-embed-container">
+                                <i data-lucide="users"></i>
+                                <p>
+                                    [Live Video Conference Placeholder]<br>
+                                    Click "Start Call" to load the Jitsi Meet iframe.
+                                </p>
+                            </div>
+
+                            <label for="room-name" style="display:block; margin-bottom: 5px; font-size: 14px; font-weight: 500;">Enter Room Name (e.g., #CoffeeChat)</label>
+                            <input type="text" id="room-name" placeholder="Community-Hangout-101" value="Eternal-Life-Meetup"
+                                   class="room-input">
+
+                            <button id="start-call-btn" class="start-call-btn">
+                                Start/Join Community Call
+                            </button>
+                        </section>
+                        
+                        <!-- Quick Actions Card -->
+                         <section class="actions-section">
+                            <h4 style="font-size: 18px; color: #004e57; margin-bottom: 15px; border-bottom: 1px dashed #eee; padding-bottom: 10px;">
+                                Quick Links
+                            </h4>
+                            
+                            <div class="space-y-4">
+                                <button onclick="alertPlaceholder('Form: Submit New Content')" class="action-button">
+                                    <i data-lucide="upload"></i> Submit News/Photo
+                                </button>
+                                <button onclick="alertPlaceholder('Form: Contact Admins')" class="action-button">
+                                    <i data-lucide="mail"></i> Contact Support
+                                </button>
+                                <button onclick="alertPlaceholder('Redirecting to Member Directory')" class="action-button">
+                                    <i data-lucide="circle-user"></i> Member Directory
+                                </button>
+                            </div>
+                        </section>
+                        
+                    </div>
+                    <div id="message-box" class="hidden"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact-footer">
+        <p>© 2025 Eternal Life | Designed for Better Senior Living</p>
+        <p>
+            <a href="#privacy-link">Privacy Policy</a> | 
+            <a href="#terms-link">Terms of Use</a>
+        </p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // --- Custom Alert/Message Function (replaces alert()) ---
+        function alertPlaceholder(message) {
+            const messageBox = document.getElementById('message-box');
+            messageBox.textContent = ACTION ALERT: ${message};
+            messageBox.classList.remove('hidden');
+            
+            // Remove previous color classes and add blue for general alerts
+            messageBox.classList.remove('bg-green'); 
+            messageBox.classList.add('bg-blue');
+
+            setTimeout(() => {
+                messageBox.classList.add('hidden');
+            }, 5000);
+        }
+
+        // --- Tab Switching Logic ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const defaultActiveTab = 'news';
+            const messageBox = document.getElementById('message-box');
+
+
+            function setActiveTab(tabName) {
+                tabButtons.forEach(button => {
+                    const isActive = button.getAttribute('data-tab') === tabName;
+                    button.classList.toggle('active', isActive);
+                });
+
+                tabContents.forEach(content => {
+                    const isContentActive = content.getAttribute('data-content') === tabName;
+                    content.classList.toggle('hidden', !isContentActive);
+                });
+                
+                // Hide message box when switching tabs
+                if (messageBox) {
+                    messageBox.classList.add('hidden');
+                }
+            }
+
+            // Set initial active tab
+            setActiveTab(defaultActiveTab);
+
+            // Add event listeners
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabName = button.getAttribute('data-tab');
+                    setActiveTab(tabName);
+                });
+            });
+
+            // --- Video Call Logic ---
+            document.getElementById('start-call-btn').addEventListener('click', function() {
+                const roomNameInput = document.getElementById('room-name');
+                const roomName = roomNameInput.value.trim() || 'Eternal-Life-Meetup';
+                const embedContainer = document.getElementById('video-embed-container');
+                
+                // 1. Create the Jitsi iframe URL
+                const jitsiUrl = https://meet.jit.si/${encodeURIComponent(roomName)};
+
+                // 2. Clear existing content and create the new iframe
+                embedContainer.innerHTML = '';
+                embedContainer.classList.add('active'); // Activate taller height
+
+                const iframe = document.createElement('iframe');
+                iframe.setAttribute('allow', 'camera; microphone; display-capture; fullscreen');
+                iframe.setAttribute('src', jitsiUrl);
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('title', 'Live Community Video Call');
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.borderRadius = '8px';
+
+                embedContainer.appendChild(iframe);
+
+                // 3. Show success message
+                messageBox.textContent = Joining room: ${roomName}. The live call widget is now loaded.;
+                messageBox.classList.remove('hidden', 'bg-blue');
+                messageBox.classList.add('bg-green');
+
+                setTimeout(() => {
+                    messageBox.classList.add('hidden');
+                }, 6000);
+            });
+        });
+
+    </script>
 </body>
 </html>
