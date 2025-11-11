@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community | Eternal Life</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      color: #007b8f;
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #007b8f;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 30px;
+      background: linear-gradient(to right, #eaf6f8, #ffffff);
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      color: #004e57;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    /* Section Cards */
+    .section {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 25px;
+      transition: transform 0.3s;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    .section h3 {
+      color: #007b8f;
+      border-bottom: 2px solid #eaf6f8;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+
+    .section p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* News Section */
+    .news-item {
+      margin-bottom: 15px;
+      border-left: 4px solid #007b8f;
+      padding-left: 10px;
+    }
+
+    .news-item h4 {
+      margin: 0;
+      color: #004e57;
+      font-size: 16px;
+    }
+
+    .news-item p {
+      font-size: 14px;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    /* Gallery */
+    .gallery-placeholder {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .gallery-placeholder div {
+      background-color: #eaf6f8;
+      border-radius: 6px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #007b8f;
+      font-weight: 600;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007b8f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005f6a;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004e57;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Eternal Life</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="features.html">Features</a>
+      <a href="health.html">Health</a>
+      <a href="community.html">Community</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Community Hub</h2>
+    <p>Connect. Share. Grow together.  
+      Explore updates, join discussions, and relive shared moments from our Eternal Life community.</p>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <section class="section">
+      <h3>📰 Latest News & Updates</h3>
+      <div class="news-item">
+        <h4>Upcoming Event: Virtual Wellness Meet</h4>
+        <p>Join us this Sunday for our online group meditation and interactive wellness chat.</p>
+      </div>
+      <div class="news-item">
+        <h4>Community Recognition Awards</h4>
+        <p>Nominate your favorite contributors for their support in our Elder Wellness Network.</p>
+      </div>
+      <a href="#" class="btn">Read More</a>
+    </section>
+
+    <section class="section">
+      <h3>📞 Join a Live Video Call</h3>
+      <p>Stay in touch with others through live calls and group chats. Schedule or start instantly!</p>
+      <div style="height: 150px; background-color: #fff3cd; border: 1px dashed #ffeeba; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #856404;">
+        [Video Call Integration Widget/Iframe]
+      </div>
+      <a href="#" class="btn">Start Now</a>
+    </section>
+
+    <section class="section">
+      <h3>📸 Memory Gallery</h3>
+      <p>Relive beautiful moments shared by our members.</p>
+      <div class="gallery-placeholder">
+        <div>Pic 1</div>
+        <div>Pic 2</div>
+        <div>Pic 3</div>
+        <div>Pic 4</div>
+      </div>
+      <a href="#" class="btn">View Gallery</a>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Eternal Life | Designed for Better Senior Living</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms of Use</a>
+    </p>
+  </footer>
+
+</body>
+</html>
