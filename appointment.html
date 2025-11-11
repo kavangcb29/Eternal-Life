@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eternal Life | Book an Appointment</title>
+    <style>
+        /* Base Styles - Matching Index.html */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f5f7fa; /* Light background matching the index page's body color */
+            color: #333;
+        }
+
+        /* Navbar - Consistent Styling */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            color: #007b8f; /* Primary color */
+            font-size: 26px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #007b8f; /* Primary color on hover */
+        }
+        
+        .active-nav {
+            color: #007b8f !important; 
+            font-weight: 700 !important;
+        }
+
+        /* Page Layout */
+        .appointment-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 40px;
+        }
+
+        /* Card Styling - Matching Feature Cards from Index.html */
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            /* Adding a subtle accent border to match the design professionalism */
+            border-top: 5px solid #007b8f; 
+        }
+
+        .appointment-form-card {
+            flex: 1;
+            min-width: 350px;
+            box-sizing: border-box;
+        }
+        
+        .appointment-list-card {
+            flex: 2;
+            box-sizing: border-box;
+        }
+
+        .card h2 {
+            color: #004e57; /* Darker accent color */
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+        
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #007b8f;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus, .form-group select:focus {
+            border-color: #007b8f;
+            outline: none;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #007b8f; /* Primary color matching the Hero button */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        .submit-btn:hover {
+            background-color: #005f6a; /* Darker hover state matching the Hero button */
+            transform: translateY(-1px);
+        }
+        
+        /* Appointment List Styles */
+        .appointment-list {
+            padding-top: 10px;
+        }
+
+        .appointment-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .appointment-item:last-child {
+            border-bottom: none;
+        }
+
+        .app-details h4 {
+            margin: 0;
+            color: #004e57;
+            font-size: 18px;
+        }
+
+        .app-details p {
+            margin: 5px 0 0 0;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .app-time {
+            font-weight: 700;
+            color: #007b8f;
+            font-size: 16px;
+        }
+
+        .cancel-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .cancel-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .completed {
+            opacity: 0.6;
+        }
+        .completed .app-details h4, .completed .app-time {
+            text-decoration: line-through;
+        }
+        .completed .cancel-btn {
+            background-color: #95a5a6;
+            cursor: not-allowed;
+        }
+
+        /* Footer - Consistent Styling */
+        footer {
+            background-color: #004e57; /* Dark teal background matching index page */
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design - Matching Index.html */
+        @media (max-width: 900px) {
+             .appointment-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .appointment-form-card, .appointment-list-card {
+                min-width: unset;
+                width: 100%;
+                max-width: 600px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px 20px 5px;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+            
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+            
+            .appointment-container {
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Eternal Life</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.htm">About</a>
+            <a href="Health.html">Health</a>
+            <a href="community.html">Community</a>
+            <a href="Appointment" class="active-nav">Appointment</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="appointment-container">
+
+        <!-- Form Section (Book New Appointment) -->
+        <div class="card appointment-form-card">
+            <h2>Book Your Next Visit</h2>
+            <form id="appointment-form">
+                <div class="form-group">
+                    <label for="appointmentType">Type of Appointment</label>
+                    <select id="appointmentType" name="appointmentType" required>
+                        <option value="Doctor Visit">Doctor Visit</option>
+                        <option value="Physical Therapy">Physical Therapy</option>
+                        <option value="Virtual Family Call" selected>Virtual Family Call</option>
+                        <option value="Community Activity">Community Activity</option>
+                        <option value="Wellness Consultation">Wellness Consultation</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="appointmentWith">With Whom / Location</label>
+                    <input type="text" id="appointmentWith" name="appointmentWith" placeholder="e.g., Dr. Patel, Local Center, Daughter Sarah" required value="Dr. Isabella Rossi">
+                </div>
+                
+                <div class="form-group">
+                    <label for="appointmentDate">Date</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate" required value="2025-11-28">
+                </div>
+                
+                <div class="form-group">
+                    <label for="appointmentTime">Time</label>
+                    <input type="time" id="appointmentTime" name="appointmentTime" required value="14:30">
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    Schedule Appointment
+                </button>
+            </form>
+        </div>
+
+        <!-- Appointment List Section -->
+        <div class="card appointment-list-card">
+            <h2>Your Upcoming Schedule</h2>
+
+            <div class="appointment-list">
+                
+                <!-- Appointment 1: Upcoming -->
+                <div class="appointment-item">
+                    <div class="app-details">
+                        <h4>Doctor Visit - Dr. Rossi</h4>
+                        <p>Annual physical check-up.</p>
+                    </div>
+                    <span class="app-time">Nov 28, 2:30 PM</span>
+                    <button class="cancel-btn">Cancel</button>
+                </div>
+
+                <!-- Appointment 2: Upcoming -->
+                <div class="appointment-item">
+                    <div class="app-details">
+                        <h4>Community Activity - Yoga Session</h4>
+                        <p>Online gentle yoga for seniors.</p>
+                    </div>
+                    <span class="app-time">Dec 5, 10:00 AM</span>
+                    <button class="cancel-btn">Cancel</button>
+                </div>
+
+                <!-- Appointment 3: Past (Completed) -->
+                <div class="appointment-item completed">
+                    <div class="app-details">
+                        <h4>Virtual Family Call - Son John</h4>
+                        <p>Weekly check-in with family.</p>
+                    </div>
+                    <span class="app-time">Nov 1, 1:00 PM</span>
+                    <button class="cancel-btn" disabled>Completed</button>
+                </div>
+                
+                <!-- Appointment 4: Upcoming -->
+                <div class="appointment-item">
+                    <div class="app-details">
+                        <h4>Physical Therapy - Hip exercises</h4>
+                        <p>Session with Therapist Jane Doe at the clinic.</p>
+                    </div>
+                    <span class="app-time">Dec 10, 9:00 AM</span>
+                    <button class="cancel-btn">Cancel</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Eternal Life | Designed for Better Senior Living</p>
+        <p>
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Use</a>
+        </p>
+    </footer>
+
+</body>
+</html>
