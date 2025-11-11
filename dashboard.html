@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eternal Life Dashboard</title>
+</head>
+<body>
+  <h1>Welcome to Eternal Life</h1>
+  <div id="userProfile"></div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_PROJECT_ID.appspot.com",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    const userProfileDiv = document.getElementById("userProfile");
+
+    onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        const docRef = doc(db, "users", user.uid);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          userProfileDiv.innerHTML = `
+            <h2>${data.fullname}</h2>
+            <p><strong>Email:</strong> ${data.email}</p>
+            <p><strong>Age:</strong> ${data.age}</p>
+            <p><strong>Gender:</strong> ${data.gender}</p>
+            <p><strong>Conditions:</strong> ${data.conditions}</p>
+            <p><strong>ABHA Number:</strong> ${data.abhaNumber}</p>
+            <p><strong>ABHA Address:</strong> ${data.abhaAddress}</p>
+          `;
+        }
+      } else {
+        window.location.href = "register.html";
+      }
+    });
+  </script>
+</body>
+</html>
