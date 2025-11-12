@@ -1,0 +1,29 @@
+import { initializeApp } from "firebase/app";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "eternal-life-209.firebaseapp.com",
+  projectId: "eternal-life-209",
+  // ... other config values ...
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+async function handleRegistration(email, password, userName) {
+  try {
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    await setDoc(doc(db, "users", userCredential.user.uid), {
+      name: userName,
+      email: email,
+      // Add more user data here
+    });
+    console.log("Registration successful!");
+  } catch (error) {
+    console.error("Registration failed:", error.message);
+  }
+}
+// Remember to update your Firestore security rules to allow writes!
