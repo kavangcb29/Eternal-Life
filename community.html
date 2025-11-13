@@ -173,17 +173,25 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 400px;
+      border-radius: 8px;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Header -->
   <header>
     <h1>Eternal Life</h1>
     <nav>
-     <a href="index.html">Home</a>
-      <a href="about.htm">About</a>
-      <a href="Health.html">Health</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="health.html">Health</a>
       <a href="community.html">Community</a>
       <a href="appointment.html">Appointment</a>
       <a href="contact.html">Contact Us</a>
@@ -193,8 +201,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <h2>Community Hub</h2>
-    <p>Connect. Share. Grow together.  
-      Explore updates, join discussions, and relive shared moments from our Eternal Life community.</p>
+    <p>Connect. Share. Grow together. Explore updates, join discussions, and relive shared moments from our Eternal Life community.</p>
   </section>
 
   <!-- Main Content -->
@@ -215,11 +222,16 @@
 
     <section class="section">
       <h3>📞 Join a Live Video Call</h3>
-      <p>Stay in touch with others through live calls and group chats. Schedule or start instantly!</p>
-      <div style="height: 150px; background-color: #fff3cd; border: 1px dashed #ffeeba; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #856404;">
-        [Video Call Integration Widget/Iframe]
-      </div>
-      <a href="#" class="btn">Start Now</a>
+      <p>Stay in touch with others through live calls and group chats. Click below to start a secure video call instantly!</p>
+
+      <!-- Embedded Jitsi Meet Video Call -->
+      <iframe
+        allow="camera; microphone; fullscreen; display-capture"
+        src="https://meet.jit.si/EternalLifeCommunityRoom"
+        allowfullscreen>
+      </iframe>
+
+      <a href="https://meet.jit.si/EternalLifeCommunityRoom" target="_blank" class="btn">Open in New Tab</a>
     </section>
 
     <section class="section">
@@ -233,18 +245,17 @@
       </div>
       <a href="#" class="btn">View Gallery</a>
     </section>
+
   </div>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 Eternal Life | Designed for Better Senior Living</p>
     <p>
-      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="privacy.html">Privacy Policy</a> |
       <a href="terms.html">Terms of Use</a>
     </p>
   </footer>
 
 </body>
 </html>
-
-
